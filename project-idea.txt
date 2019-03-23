@@ -4,3 +4,11 @@ and other healthcare providers, untimely scheduling of appointments.
 
 How we're going to do it:
 Use Twilio API to send texts/calls to PCPs, use Microsoft Azure for something
+
+- Create a webapp with user accounts (use a client like UserFrosting)
+- User inputs PCP info, if they don't have a PCP it will direct them to providers near them and they 
+- Have user input demographic information, based on that demographic information, show a list of most common health problems
+- Have the user take a photo and have emotion face recognized, then from that photo, ask questions like "Are you in pain?", "Are you anxious?", "Are you sad?" etc. (answer choices yes or no)
+- From there, ask follow-up questions based on the mood, for example if someone feels sad, then ask questions related to symptoms of depression, etc.
+- Ask user to input symptoms that are related to mood/problem/etc.
+- If user says yes to all, reate automated phone call to PCP that's like: "This is an automated message from <name of whatever we decide to call this>. Patient <patient name> has been feeling <mood>. They are exhibiting symptoms of <health issue>, including <symptoms>. They are also <user-inputted symptoms>. Please call <user phone number> to schedule an appointment with them."
