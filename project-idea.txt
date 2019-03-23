@@ -1,0 +1,6 @@
+What we're trying to solve:
+Disparities in healthcare caused by lack of knowledge of health conditions, lack of access to PCPs
+and other healthcare providers, untimely scheduling of appointments.
+
+How we're going to do it:
+Use Twilio API to send texts/calls to PCPs, use Microsoft Azure for something
