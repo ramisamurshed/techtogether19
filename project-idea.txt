@@ -12,3 +12,12 @@ Use Twilio API to send texts/calls to PCPs, use Microsoft Azure for something
 - From there, ask follow-up questions based on the mood, for example if someone feels sad, then ask questions related to symptoms of depression, etc.
 - Ask user to input symptoms that are related to mood/problem/etc.
 - If user says yes to all, reate automated phone call to PCP that's like: "This is an automated message from <name of whatever we decide to call this>. Patient <patient name> has been feeling <mood>. They are exhibiting symptoms of <health issue>, including <symptoms>. They are also <user-inputted symptoms>. Please call <user phone number> to schedule an appointment with them."
+
+
+
+Things we need to figure out:
+
+- Login/registration form
+- How to take a photo and then analyze that photo with Azure facial recognition
+- How to ask questions and then ask follow ups based on that question
+- How to get the data from the answers and put that in a Twilio phone call --> store data using SQL/R
