@@ -1,7 +1,6 @@
 'use strict';
 
 var fs = require('fs');
-var bitmap = fs.readFileSync('/Users/ramisamurshed/techtogether19/img_upload/public/Images/uploadedimage.jpg', { encoding: 'base64'});
 
 const request = require('request');
 
@@ -27,7 +26,7 @@ const params = {
 const options = {
     uri: uriBase,
     qs: params,
-    body: fs.readFileSync('/Users/ramisamurshed/techtogether19/img_upload/public/Images/uploadedimage.jpg'),
+    body: fs.readFileSync(__dirname + '/img_upload/public/Images/uploadedimage.jpg'),
     //, { encoding: 'base64'}),
     headers: {
         'Content-Type': 'application/octet-stream',
@@ -35,12 +34,35 @@ const options = {
     }
 };
 
-request.post(options, (error, response, body) => {
-  if (error) {
-    console.log('Error: ', error);
-    return;
+// function to find max emotion in JSON
+function findMaxJSON(jsonObj) {
+  var keyArray = Object.keys(jsonObj);
+  var max = 0;
+  var maxKey = '';
+  var x;
+  for (x in keyArray) {
+    if (jsonObj[keyArray[x]] > max) {
+      max = jsonObj[keyArray[x]];
+      maxKey = keyArray[x];
+    }
   }
-  let jsonResponse = JSON.stringify(JSON.parse(body), null, '  ');
-  console.log('JSON Response\n');
-  console.log(jsonResponse);
-});
+  return maxKey;
+}
+
+function getEmotion(callback) {
+  request.post(options, (error, response, body) => {
+    if (error) {
+      console.log('Error: ', error);
+      return;
+    }
+    let jsonResponse = JSON.parse(body);
+    console.log('JSON Response\n');
+    console.log(jsonResponse);
+
+    var sympt = findMaxJSON(jsonResponse[0]["faceAttributes"]["emotion"]);
+    console.log(sympt);
+    callback(sympt);
+  })
+}
+
+exports.getEmotion = getEmotion;

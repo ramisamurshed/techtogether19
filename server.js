@@ -8,6 +8,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/local-files', express.static('/'));
 
 var mongoose = require("mongoose");
 var new_db = "mongodb://localhost:27017/my_symp_tracker_db";
@@ -63,7 +64,6 @@ app.get("/show", function (req, res) {
 app.post("/api/Upload", (req, res) => {
   upload(req, res, function (err) {
       if (err) {
-          console.log(err);
           return res.end("Something went wrong!");
       }
      res.redirect("/show");
@@ -74,21 +74,21 @@ app.post("/api/Upload", (req, res) => {
 // ALSO todo: change html site names
 // should render respective symptomatic questions site
 app.post("/symptomaticquestions", (req, res) => {
-  var myData = req; // need specifically the max
-  myData.save()
-  var situation = max(myData) // need the situation associated w/ that max value
-                  // of the symptoms JSON ? or was it an array
-  switch(myData) {
-    case "Anger":
-      res.sendFile(__dirname + "/public/angerquestions.html");
-    break;
-    case "Fear":
-      res.sendFile(__dirname + "/public/fearquestions.html");
-    break;
-    case "Sadness":
-      res.sendFile(__dirname + "/public/sadquestions.html");
-    break;
+  function processSymptom(symptom) {
+    switch(symptom) {
+      case "anger":
+        res.sendFile(__dirname + "/public/angerquestions.html");
+      break;
+      case "fear":
+        res.sendFile(__dirname + "/public/fearquestions.html");
+      break;
+      case "sadness":
+        res.sendFile(__dirname + "/public/sadquestions.html");
+      break;
+    }
   }
+  var facedetection = require('./facedetection');
+  facedetection.getEmotion(processSymptom);
 });
 
 app.listen(port, () => {
