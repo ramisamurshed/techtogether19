@@ -8,7 +8,7 @@
 		crossorigin="anonymous">
 
 		<!-- Including Custom css -->
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="/style.css">
 
 	</head>
 	<body>
@@ -28,55 +28,38 @@
 					<form action="/twilio" method="post">
 
 						<h1> Symptomatic Questions</h1>
-						<h2>SADNESS</h2>
-						Enter your Date of Birth (YYYY-MM-DD)
-						<input class="date" type="date" name="dob" id="dob" min="1900-01-01" required /><br>
+						<br>
+						<span class="question">Do you have unexpected, intense sadness that lasts longer than a few days at a time?</span><br>
+						<input class="radio" type="radio" name="sad" id="sad" value="yes" required/>Yes<br>
+						<input class="radio" type="radio" name="sad" id="sad" value="no"/>No<br><br>
 
-						What race do you identify with? Please check all that apply.
-						<input class="checkbox" type="checkbox" name="race" id="race" value="race1"/>American Indian or Alaska Native<br>
-						<input class="checkbox" type="checkbox" name="race" id="race" value="race2"/>Asian<br>
-						<input class="checkbox" type="checkbox" name="race" id="race" value="race3"/>Black or African American<br>
-						<input class="checkbox" type="checkbox" name="race" id="race" value="race4"/>Native Hawaiian or Other Pacific Islander<br>
-						<input class="checkbox" type="checkbox" name="race" id="race" value="race5"/>White<br>
+						<span class="question">Do you have irregular sleeping patterns?</span><br>
+						<input class="radio" type="radio" name="sleep" id="sleep" value="yes" required/>Yes<br>
+						<input class="radio" type="radio" name="sleep" id="sleep" value="no"/>No<br><br>
 
-						What ethnicity do you identify with?
-						<input class="radio" type="radio" name="ethnicity" id="ethnicity" value="ethn1"/>Hispanic or Latino<br>
-						<input class="radio" type="radio" name="ethnicity" id="ethnicity" value="ethn2"/>Not Hispanic or Latino<br>
+						<span class="question">Have your eating patterns changed?</span><br>
+						<input class="radio" type="radio" name="eat" id="eat" value="yes" required/>Yes<br>
+						<input class="radio" type="radio" name="eat" id="eat" value="no"/>No<br><br>
 
-						What gender do you identify with?
-						<input class="radio" type="radio" name="gender" id="gender" value="gend1"/>Female<br>
-						<input class="radio" type="radio" name="gender" id="gender" value="gend2"/>Male<br>
-						<input class="radio" type="radio" name="gender" id="gender" value="gend3"/>Non-binary / Third gender<br>
-						<input class="radio" type="radio" name="gender" id="gender" value="gend4"/>Prefer to self-describe<input class="box" type="text" name="self" id="self"/><br>
-						<input class="radio" type="radio" name="gender" id="gender" value="gend5"/>Prefer not to say<br>
+						<span class="question">Do you prefer to stay at home rather than going out and doing new things?</span><br>
+						<input class="radio" type="radio" name="home" id="home" value="yes" required/>Yes<br>
+						<input class="radio" type="radio" name="home" id="home" value="no"/>No<br><br>
 
-						What is your sexual orientation?
-						<input class="radio" type="radio" name="sex" id="sex" value="sex1"/>Straight/Heterosexual<br>
-						<input class="radio" type="radio" name="sex" id="sex" value="sex2"/>Gay or Lesbian<br>
-						<input class="radio" type="radio" name="sex" id="sex" value="sex3"/>Bisexual<br>
-						<input class="radio" type="radio" name="sex" id="sex" value="sex4"/>Prefer to self-describe<input class="box" type="text" name="self" id="self"/><br>
-						<input class="radio" type="radio" name="sex" id="sex" value="sex5"/>Prefer not to say<br>
+						<span class="question">Are you fatigued or lacking in energy?</span><br>
+						<input class="radio" type="radio" name="energy" id="energy" value="yes" required/>Yes<br>
+						<input class="radio" type="radio" name="energy" id="energy" value="no"/>No<br><br>
 
-						Are you pregnant or trying to become pregnant?
-						<input class="radio" type="radio" name="preg" id="preg" value="no"/>No<br>
-						<input class="radio" type="radio" name="preg" id="preg" value="yes"/>Yes<br>
+						<span class="question">Do you have feelings of hopelessness often?</span><br>
+						<input class="radio" type="radio" name="hopeless" id="hopeless" value="yes" required/>Yes<br>
+						<input class="radio" type="radio" name="hopeless" id="hopeless" value="no"/>No<br><br>
 
-						Do you have any chronic medical conditions? Please check all that apply.
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond1"/>Alzheimer's disease and Dementia<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond2"/>Arthritis<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond3"/>Asthma<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond4"/>Cancer<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond5"/>COPD<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond6"/>Crohn's disease<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond7"/>Cystic fibrosis<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond8"/>Diabetes<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond9"/>Epilepsy<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond10"/>Heart disease<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond11"/>HIV/AIDS<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond12"/>Mood disorders (bipolar, cyclothymic, and depression)<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond13"/>Multiple sclerosis<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond14"/>Parkinson's disease<br>
-						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond15"/>Other<input class="box" type="text" name="self" id="self"/><br>
+						<span class="question">Have you lost interest in activities you once enjoyed?</span><br>
+						<input class="radio" type="radio" name="interest" id="interest" value="yes" required/>Yes<br>
+						<input class="radio" type="radio" name="interest" id="interest" value="no"/>No<br><br>
+
+						<span class="question">Are you using alcohol or drugs to manage your mood?</span><br>
+						<input class="radio" type="radio" name="drugs" id="drugs" value="yes" required/>Yes<br>
+						<input class="radio" type="radio" name="drugs" id="drugs" value="no"/>No<br><br>
 
 						<br>
 						<input type="submit" id="submitDetails"  name="submitDetails" value="Submit" /><br>

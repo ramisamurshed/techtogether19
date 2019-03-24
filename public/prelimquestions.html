@@ -8,7 +8,7 @@
 		crossorigin="anonymous">
 
 		<!-- Including Custom css -->
-		<link rel="stylesheet" type="text/css" href="style2.css">
+		<link rel="stylesheet" type="text/css" href="/style.css">
 
 	</head>
 	<body>
@@ -29,41 +29,41 @@
 
 						<h1> Preliminary Questions</h1>
 
-						Enter your Date of Birth:<br>
+						<span class="question">Enter your Date of Birth:</span><br>
 						<input class="date" type="date" name="dob" id="dob" min="1900-01-01" required style="font-size:15px"/><br><br>
 
-						What race do you identify with? Please check all that apply.<br>
+						<span class="question">What race do you identify with? Please check all that apply.</span><br>
 						<input class="checkbox" type="checkbox" name="race" id="race" value="race1"/>American Indian or Alaska Native<br>
 						<input class="checkbox" type="checkbox" name="race" id="race" value="race2"/>Asian<br>
 						<input class="checkbox" type="checkbox" name="race" id="race" value="race3"/>Black or African American<br>
 						<input class="checkbox" type="checkbox" name="race" id="race" value="race4"/>Native Hawaiian or Other Pacific Islander<br>
 						<input class="checkbox" type="checkbox" name="race" id="race" value="race5"/>White<br><br>
 
-						What ethnicity do you identify with?<br>
-						<input class="radio" type="radio" name="ethnicity" id="ethnicity" value="ethn1"/>Hispanic or Latino<br>
+						<span class="question">What ethnicity do you identify with?</span><br>
+						<input class="radio" type="radio" name="ethnicity" id="ethnicity" value="ethn1" required/>Hispanic or Latino<br>
 						<input class="radio" type="radio" name="ethnicity" id="ethnicity" value="ethn2"/>Not Hispanic or Latino<br><br>
 
-						What gender do you identify with?<br>
-						<input class="radio" type="radio" name="gender" id="gender" value="gend1"/>Female<br>
+						<span class="question">What gender do you identify with?</span><br>
+						<input class="radio" type="radio" name="gender" id="gender" value="gend1" required/>Female<br>
 						<input class="radio" type="radio" name="gender" id="gender" value="gend2"/>Male<br>
 						<input class="radio" type="radio" name="gender" id="gender" value="gend3"/>Non-binary / Third gender<br>
+						<input class="radio" type="radio" name="gender" id="gender" value="gend5"/>Prefer not to say<br>
 						<input class="radio" type="radio" name="gender" id="gender" value="gend4"/>Prefer to self-describe<br>
-						<input class="box" type="text" name="self" id="self"/><br>
-						<input class="radio" type="radio" name="gender" id="gender" value="gend5"/>Prefer not to say<br><br>
+						<input class="box_small" type="text" name="self" id="self"/><br><br>
 
-						What is your sexual orientation?<br>
-						<input class="radio" type="radio" name="sex" id="sex" value="sex1"/>Straight/Heterosexual<br>
+						<span class="question">What is your sexual orientation?</span><br>
+						<input class="radio" type="radio" name="sex" id="sex" value="sex1" required/>Straight/Heterosexual<br>
 						<input class="radio" type="radio" name="sex" id="sex" value="sex2"/>Gay or Lesbian<br>
 						<input class="radio" type="radio" name="sex" id="sex" value="sex3"/>Bisexual<br>
+						<input class="radio" type="radio" name="sex" id="sex" value="sex5"/>Prefer not to say<br>
 						<input class="radio" type="radio" name="sex" id="sex" value="sex4"/>Prefer to self-describe<br>
-						<input class="box" type="text" name="self" id="self"/><br>
-						<input class="radio" type="radio" name="sex" id="sex" value="sex5"/>Prefer not to say<br><br>
+						<input class="box_small" type="text" name="self" id="self"/><br><br>
 
-						Are you pregnant or trying to become pregnant?<br>
-						<input class="radio" type="radio" name="preg" id="preg" value="no"/>No<br>
+						<span class="question">Are you pregnant or trying to become pregnant?</span><br>
+						<input class="radio" type="radio" name="preg" id="preg" value="no" required/>No<br>
 						<input class="radio" type="radio" name="preg" id="preg" value="yes"/>Yes<br><br>
 
-						Do you have any chronic medical conditions? Please check all that apply.<br>
+						<span class="question">Do you have any chronic medical conditions? Please check all that apply.</span><br>
 						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond1"/>Alzheimer's disease and Dementia<br>
 						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond2"/>Arthritis<br>
 						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond3"/>Asthma<br>
@@ -78,19 +78,19 @@
 						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond12"/>Mood disorders (bipolar, cyclothymic, and depression)<br>
 						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond13"/>Multiple sclerosis<br>
 						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond14"/>Parkinson's disease<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond16"/>None of the above<br>
 						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond15"/>Other<br>
-						<input class="box" type="text" name="self" id="self"/><br><br>
+						<input class="box_small" type="text" name="self" id="self"/><br><br>
 
-				
-						Do you have a Primary Care Physician (PCP)?
-						<input class="radio" type="radio" name="pcp" id="pcp" value="no"/>No<br>
-						<input class="radio" type="radio" name="pcp" id="pcp" value="yes"/>Yes<br>
+						<span class="question">Do you have a Primary Care Physician (PCP)?</span><br>
+						<input class="radio" type="radio" name="pcp" id="pcp" value="no" required/>No<br>
+						<input class="radio" type="radio" name="pcp" id="pcp" value="yes"/>Yes<br><br>
 
-						If you answered 'Yes' to the question above, please enter their phone number.<br>
-						<input class="box" type="text" name="phone" id="phone" placeholder="Phone Number "/><br>
+						<span class="question">If you answered 'Yes' to the question above, please enter their phone number.</span><br>
+						<input class="box_small" type="text" name="phone" id="phone" placeholder="Phone Number "/><br>
 
 						<br>
-						<center><input type="submit" id="submitDetails"  name="submitDetails" value="Submit Your Details" /></center><br>
+						<center><input type="submit" id="submitDetails"  name="submitDetails" value="Submit" /></center><br>
 
 					</form>
 
