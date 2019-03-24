@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+	<head>
+		<title> Preliminary Questions | MySympTracker </title>
+
+		<!-- Including bootstrap v3.3.7 -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		crossorigin="anonymous">
+
+		<!-- Including Custom css -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+	</head>
+	<body>
+
+		<br>
+		<br>
+		<br>
+		<div class="container" >
+			<div class="row">
+				<div class="col-md-3">
+					<!-- Blank DIV -->
+				</div>
+
+				<div class="col-md-6 main">
+					<!-- Form Tag starts here -->
+					<!-- Action attribute is the route on backend. Method is POST -->
+					<form action="/upload" method="post">
+
+						<h1> Preliminary Questions</h1>
+
+						Enter your Date of Birth
+						<input class="date" type="date" name="dob" id="dob" min="1900-01-01" required /><br>
+
+						What race do you identify with? Please check all that apply.
+						<input class="checkbox" type="checkbox" name="race" id="race" value="race1"/>American Indian or Alaska Native<br>
+						<input class="checkbox" type="checkbox" name="race" id="race" value="race2"/>Asian<br>
+						<input class="checkbox" type="checkbox" name="race" id="race" value="race3"/>Black or African American<br>
+						<input class="checkbox" type="checkbox" name="race" id="race" value="race4"/>Native Hawaiian or Other Pacific Islander<br>
+						<input class="checkbox" type="checkbox" name="race" id="race" value="race5"/>White<br>
+
+						What ethnicity do you identify with?
+						<input class="radio" type="radio" name="ethnicity" id="ethnicity" value="ethn1"/>Hispanic or Latino<br>
+						<input class="radio" type="radio" name="ethnicity" id="ethnicity" value="ethn2"/>Not Hispanic or Latino<br>
+
+						What gender do you identify with?
+						<input class="radio" type="radio" name="gender" id="gender" value="gend1"/>Female<br>
+						<input class="radio" type="radio" name="gender" id="gender" value="gend2"/>Male<br>
+						<input class="radio" type="radio" name="gender" id="gender" value="gend3"/>Non-binary / Third gender<br>
+						<input class="radio" type="radio" name="gender" id="gender" value="gend4"/>Prefer to self-describe<input class="box" type="text" name="self" id="self"/><br>
+						<input class="radio" type="radio" name="gender" id="gender" value="gend5"/>Prefer not to say<br>
+
+						What is your sexual orientation?
+						<input class="radio" type="radio" name="sex" id="sex" value="sex1"/>Straight/Heterosexual<br>
+						<input class="radio" type="radio" name="sex" id="sex" value="sex2"/>Gay or Lesbian<br>
+						<input class="radio" type="radio" name="sex" id="sex" value="sex3"/>Bisexual<br>
+						<input class="radio" type="radio" name="sex" id="sex" value="sex4"/>Prefer to self-describe<input class="box" type="text" name="self" id="self"/><br>
+						<input class="radio" type="radio" name="sex" id="sex" value="sex5"/>Prefer not to say<br>
+
+						Are you pregnant or trying to become pregnant?
+						<input class="radio" type="radio" name="preg" id="preg" value="no"/>No<br>
+						<input class="radio" type="radio" name="preg" id="preg" value="yes"/>Yes<br>
+
+						Do you have any chronic medical conditions? Please check all that apply.
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond1"/>Alzheimer's disease and Dementia<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond2"/>Arthritis<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond3"/>Asthma<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond4"/>Cancer<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond5"/>COPD<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond6"/>Crohn's disease<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond7"/>Cystic fibrosis<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond8"/>Diabetes<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond9"/>Epilepsy<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond10"/>Heart disease<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond11"/>HIV/AIDS<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond12"/>Mood disorders (bipolar, cyclothymic, and depression)<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond13"/>Multiple sclerosis<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond14"/>Parkinson's disease<br>
+						<input class="checkbox" type="checkbox" name="cond" id="cond" value="cond15"/>Other<input class="box" type="text" name="self" id="self"/><br>
+
+						Do you have a Primary Care Physician (PCP)?
+						<input class="radio" type="radio" name="pcp" id="pcp" value="no"/>No<br>
+						<input class="radio" type="radio" name="pcp" id="pcp" value="yes"/>Yes<br>
+
+						If you answered 'Yes' to the question above, please enter their phone number.
+						<input class="box" type="text" name="phone" id="phone" placeholder="Phone Number "/><br>
+
+						<br>
+						<input type="submit" id="submitDetails"  name="submitDetails" value="Submit Your Details" /><br>
+
+					</form>
+
+				</div>
+
+
+				<div class="col-md-3">
+					<!-- Blank DIV -->
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>
