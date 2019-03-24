@@ -1,21 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 
 @media screen and (max-width: 600px) {
-  .column {
+  .container-fluid {
     width: 100%;
   }
 }
-.column {
-  float: left;
+
+.row {
+  display: flex;
 }
 
-.left {
-  width: 75%;
+.container-fluid {
+  flex: 50%;
 }
 
-.right {
-  width: 25%;
-}
 .main{
 	padding:20px;
 	font-family: 'Rubik';
@@ -24,20 +22,31 @@
 	align-items : center;
 	
 }
+.navbar{
+	background-color:#E4FDE1;
+	border-radius: 10px;
+}
 .navbar-brand{
 	font-size: 30px;
 	font-family: 'Rubik';
 	color: #114B5F;
+	padding-right: 30px;
 }
 
 .nav-item{
-	font-size: 12px;
+	font-size: 20px;
 	font-family: 'Rubik';
 	color: #114B5F;
 	align-items : center;
+	padding: 10px;
+}
+body{
+	font-family: 'Rubik';
+	fon-size: 18px;
+	padding-left: 10px;
 }
 .main h1{
-	font-size: 50px;
+	font-size: 35px;
 	text-align: center;
 	font-family: 'Rubik';
 	color: #114B5F;
@@ -45,7 +54,7 @@
 input{
 	font-family: 'Rubik';
     width: 100%;
-	font-size: 30px;
+	font-size: 20px;
     padding: 12px 20px;
     margin: 8px 0;
     border: none;
