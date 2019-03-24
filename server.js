@@ -70,7 +70,6 @@ app.post("/api/Upload", (req, res) => {
   });
 });
 
-// not sure how receiving this data yet !!! purely hypothetical
 // ALSO todo: change html site names
 // should render respective symptomatic questions site
 app.post("/symptomaticquestions", (req, res) => {
@@ -89,6 +88,10 @@ app.post("/symptomaticquestions", (req, res) => {
   }
   var facedetection = require('./facedetection');
   facedetection.getEmotion(processSymptom);
+});
+
+app.post("/twilio", (req, res) => {
+  var testcall = require('./testcall');
 });
 
 app.listen(port, () => {
