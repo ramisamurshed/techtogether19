@@ -1,0 +1,2 @@
+F:\Visual Studio\Node_JS_File_Upload\Node_JS_File_Upload\obj\Debug\Node_JS_File_Upload.njsprojResolveAssemblyReference.cache
+F:\Visual Studio\Node_JS_File_Upload\Node_JS_File_Upload\bin\Microsoft.NodejsTools.WebRole.dll
