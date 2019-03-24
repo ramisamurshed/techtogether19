@@ -7,7 +7,7 @@ var multer = require('multer');
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 app.use('/local-files', express.static('/'));
 
 var mongoose = require("mongoose");
@@ -25,7 +25,7 @@ var User = mongoose.model("User", userSchema);
 
 var Storage = multer.diskStorage({
     destination: function (req, file, callback) {
-        callback(null, "./img_upload/public/Images");
+        callback(null, "./public/");
     },
     filename: function (req, file, callback) {
         callback(null, "uploadedimage.jpg");
@@ -33,7 +33,7 @@ var Storage = multer.diskStorage({
 });
 
 var upload = multer({ storage: Storage }).array("imgUploader", 3);
-
+console.log(__dirname);
 // renders initial sign-up/ login page
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
@@ -92,7 +92,7 @@ app.post("/symptomaticquestions", (req, res) => {
 
 app.post("/twilio", (req, res) => {
   var testcall = require('./testcall');
-});
+})
 
 app.listen(port, () => {
     console.log("Server listening on port " + port);
