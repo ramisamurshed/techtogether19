@@ -1,12 +1,20 @@
 <html>
+<head>
+<base href="/">
+<link href="./img.css" rel="stylesheet" type="text/css">
+</head>
+
 <body>
-	<div>
-<img src="./uploadedimage.jpg" width="400" height"400"/>
-</div>
-
-<form action="/symptomaticquestions" method="post">
-		<input type="submit" id="next" name="next" value="Next"/>
-</form>
-
+	<div class="container">
+		<div class="col-md-8 main" style="background-color: #FFFFFF">
+			<div class="smile">
+				<img class="uploadedimage" src="./uploadedimage.jpg" width="400"/>
+			</div>
+			<br>
+			<form action="/symptomaticquestions" method="post">
+				<input type="submit" id="next" name="next" value="Next"/>
+			</form>
+		</div>
+	</div>
 </body>
 </html>

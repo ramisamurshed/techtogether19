@@ -33,7 +33,7 @@ var Storage = multer.diskStorage({
 });
 
 var upload = multer({ storage: Storage }).array("imgUploader", 3);
-console.log(__dirname);
+
 // renders initial sign-up/ login page
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
@@ -70,7 +70,6 @@ app.post("/api/Upload", (req, res) => {
   });
 });
 
-// ALSO todo: change html site names
 // should render respective symptomatic questions site
 app.post("/symptomaticquestions", (req, res) => {
   function processSymptom(symptom) {

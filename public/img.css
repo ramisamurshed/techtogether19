@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+.row {
+  display: flex;
+}
+
+.container-fluid {
+  flex: 50%;
+}
+
+.smile .uploadedimage img {
+  margin: 0;
+}
+
+.main{
+	padding:20px;
+	font-family: 'Rubik';
+	border : 2px solid #114B5F;
+	border-radius: 15px;
+	align-items : center;
+
+}
+
+body {
+	font-family: 'Rubik';
+	font-size: 18px;
+	padding-left: 10px;
+	background-color: #E4FDE1;
+}
+.main h1{
+	font-size: 35px;
+	text-align: center;
+	font-family: 'Rubik';
+	color: #114B5F;
+}
+input{
+	font-family: 'Rubik';
+    width: 100%;
+	font-size: 20px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid #028090;
+    display: inline-block;
+}
+
+input[type=submit] {
+	font-family: 'Rubik';
+	width: 100%;
+    background-color: #114B5F;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 15px;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input:hover {
+	font-family: 'Rubik';
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	border: none;
+    border-bottom: 2px solid #114B5F;
+}
+
+input[type=submit]:hover {
+	font-family: 'Rubik';
+	width: 100%;
+    background-color: #028090;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 15px;
+}
+.wrapper {
+  display : flex;
+  align-items : center;
+}
+
+.question {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input#self.box_small, input#phone.box_small, input#dob.date {
+  width: 50%;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .container-fluid {
+    width: 100%;
+  }
+}
+
+.smile {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}

@@ -69,6 +69,8 @@ input[type=submit] {
     cursor: pointer;
 	border-radius: 15px;
 }
+
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -76,7 +78,7 @@ button:focus {
     outline: none;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover{
 	font-family: 'Rubik';
 	width: 100%;
     background-color: #028090;
